@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+
+<!-- Fig. 2.1: main.html -->
+<!-- First HTML5 example. -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Welcome To Thunderdome!</title>
+    <style type="text/css">
+        body {
+            background-image: url(IMG_0906.JPG);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: LightGrey;
+        }
+
+        p {
+            font-size: 25pt;
+            color: blue;
+            text-indent: 10pt;
+            font-family: arial, sans-serif;
+            overflow: hidden
+        }
+
+        .dark {
+            font-weight: bold;
+        }
+
+     
+
+       .flexbox 
+        {
+            width: 600px;
+            height: 450px; 
+            display: -webkit-box;
+            display: box;
+            -webkit-box-orient: horizontal;
+            box-orient: horizontal;
+        }
+
+        .flexbox > div 
+        {
+                -webkit-transition: 1s ease-out;
+                transition: 1s ease-out;
+                -webkit-border-radius: 10px;
+                border-radius: 10px;
+                border: 2px solid black;
+                width: 250px;
+                margin: 10px -10px 10px 0px;
+                padding: 20px 20px 20px 20px;
+                box-shadow: 10px 10px 10px dimgrey;
+        }
+
+        .flexbox > div:nth-child(1) { background-color: darkolivegreen; }
+
+        .flexbox > div:nth-child(2) { background-color: aliceblue;}
+
+        .flexbox > div:nth-child(3) {background-color: lightseagreen;}
+        
+        .flexbox > div:nth-child(4) {background-color: bisque;}
+
+        .flexbox > div:hover { width: 300px;color: white;font-weight: bold;}
+        
+        .flexbox > div:nth-child(1):hover {background-color: tan;}
+
+        .flexbox > div:nth-child(2):hover { background-color: honeydew;}
+
+        .flexbox > div:nth-child(3):hover {background-color: lightskyblue;}
+
+        .flexbox > div:nth-child(4):hover {background-color: deeppink;}
+         #cover 
+         {
+            position: relative;
+            margin: 0 auto;	
+         }
+         #cover img 
+         {
+            position: absolute;
+            left: 0;
+            -webkit-transition: opacity 4s ease-in-out;
+            transition: opacity 4s ease-in-out;
+         }
+         #cover img.top:hover 
+            { opacity:0; }
+       
+    </style>
+</head>
+
+   <body>
+
+       
+       <h1> Hello Everyone </h1>
+
+
+       <p style="font-size: 20pt; color: purple;">
+
+           Hello, My name is Daniel Gasperini. I am a <em>father</em>, veteran, and computer science major. I have a little girl named Rowan who is one year(s) old who makes my day by dancing and giving me big hugs.
+           I was a <a href="https://www.youtube.com/watch?v=2LBHAAjN5Qk">Army Ranger</a> and served in Afghanistan. My time in the service taught me how hard I can push myself and I try to still follow the <a href="https://www.benning.army.mil/tenant/75thranger/Ranger-Creed.html">Ranger Creed</a> every day. Lastly, I am a computer science major.
+           The reason I chose computer science was because of my IT work while serving, my jobs ranged from being a radio operator to network administrator for my company commander. after I finished my service, I work
+           overseas for a year in two locations. First was <a href="https://en.wikipedia.org/wiki/Thule_Air_Base">Thule</a>, Greenland for six months and then <a href="https://en.wikipedia.org/wiki/Diego_Garcia">Diego Garcia</a>, British Indian Ocean Territory for another 7 months. I worked with a section of the Air Force (now Space Force) to track
+           and connect to satellites and rockets. After that job I came home and decided instead of making good money (tax free), I wanted to be a poor college student and start a family. I originally wanted to go to University of Houston however after I experienced how unfriendly and unsupportive, they were, I applied and to UHD and they were much 
+           better to deal with. I now am a full-time student, living off the government and scholarships. I am planning to finish school and work for a little bit but mainly start a business. Remember, a job maybe secure but you will always have a ceiling.
+       </p>
+
+       
+       
+           <h2>Some Fun Pictures</h2>
+
+           <div class="flexbox">
+               <div>
+                   <img src="army _pic.JPG" width="250" height="250" alt="Army Ranger">
+                   <p>Army Ranger RLTW!!</p>
+               </div>
+
+
+               <div>
+                   <img src="background.JPG" width="250" height="250" alt="Summer In Greenland">
+                   <p>Summer in Greenland. First light of the year.</p>
+               </div>
+
+               <div>
+                   <img src="diego.JPG" width="250" height="250" alt="Summer in Diego Garcia">
+                   <p>Summer in Diego. Double summer.</p>
+               </div>
+
+               <div>
+                   <img src="Rowan.JPG" alt="My Baby" width="250" height="250"><p>Cute, Small, Little BABY!!!.</p>
+               </div>
+           </div>
+
+      
+       
+
+
+           <center>
+               <table border="1">
+
+                   <!-- the <caption> tag summarizes the table's -->
+                   <!-- contents (this helps visually impaired people) -->
+                   <caption>
+                       <strong>
+                           Things the Military Gives You (1st column) and
+                           Their Prices (2nd column)
+                       </strong>
+                   </caption>
+
+                   <!-- the <thead> section appears first in the table -->
+                   <!-- it formats the table header area -->
+                   <thead>
+                       <tr>
+                           <!-- <tr> inserts a table row -->
+                           <th>Stuff</th> <!-- insert a heading cell -->
+                           <th>Price</th>
+                       </tr>
+                   </thead>
+
+                   <!-- the <tfoot> section appears last in the table -->
+                   <!-- it formats the table footer -->
+                   <!-- all table content is enclosed -->
+                   <!-- within the <tbody> -->
+                   <tbody>
+                       <tr>
+                           <td>Helmet</td> <!-- insert a data cell -->
+                           <td>$400</td>
+                       </tr>
+                       <tr>
+                           <td>Uniform</td>
+                           <td>$20</td>
+                       </tr>
+                       <tr>
+                           <td>Back Pain</td>
+                           <td>Ibuprofen</td>
+                       </tr>
+                       <tr>
+                           <td>Drinking Problem</td>
+                           <td>Priceless</td>
+                       </tr>
+                   </tbody>
+               </table>
+           </center>
+       <h1>Do you think she is a cute baby?</h1>
+
+       <p>
+           Type your answer into the box and find out.
+       </p>
+
+       <!-- this tag starts the form, gives the -->
+       <!-- method of sending information and the -->
+       <!-- location of the form-processing script -->
+       <form method="post" action="https://youtu.be/Weay4o0yXU4">
+           <!-- hidden inputs contain non-visual -->
+           <!-- information that will also be submitted -->
+           <input type="hidden" name="recipient"
+                  value="deitel@deitel.com">
+           <input type="hidden" name="subject"
+                  value="Feedback Form">
+           <input type="hidden" name="redirect"
+                  value="main.html">
+
+           <!-- <input type = "text"> inserts a text field -->
+           <p>
+               <label>
+                   Yes or No:
+                   <input name="name" type="text" size="25"
+                          maxlength="30">
+               </label>
+           </p>
+
+           <p>
+               <!-- input types "submit" and "reset" insert -->
+               <!-- buttons for submitting and clearing the -->
+               <!-- form's contents, respectively -->
+               <input type="submit" value="Submit">
+               <input type="reset" value="Clear">
+           </p>
+       </form>
+       
+           <div id="cover"><center>
+    <img class="bottom" src="BigGirl.jpg" alt="Java 8e cover" width="250" height="250">
+    <img class="top" src="IMG_0498.JPG" alt="Java 9e cover" width="250" height="250">
+
+</center></div>
+       
+   </body>
+</html>
+
+
+
+
+
+

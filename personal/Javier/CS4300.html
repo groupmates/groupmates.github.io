@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Used for awesome and animated font-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+              <!-- Use w3-medthod for fromating and awesome font -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+/* Use to hold background image and text in center */
+.container {
+  position: relative;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+}
+
+img { 
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+}
+
+/* table class with small border*/
+table, td, th {
+  border: 1px solid white;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  height: 50px;
+}
+
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+  background-color: purple;
+}
+@media screen and (min-width: 880px) {
+  body {
+    background-color: black;
+  }
+}
+
+
+/* Style tab links */
+.tablink {
+  background-color: black;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 20px 16px;
+  font-size: 16px;
+  width: 20%;
+}
+
+/* color when mouse hover over tab*/
+.tablink:hover {
+  background-color: dimgrey;
+  transition: width 2s;
+  width: 150px;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 95px 24px;
+  height: 100%;
+}
+
+#Home {font-family: Courier New;}
+#Forms {background-color: black;}
+#Contact {font-family: Times New Roman;}
+#Skills {background-color: black; }
+#About {font-family: Times New Roman;}
+#Resume {background-color: black;}
+</style>
+</head>
+
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, 'purple')"id="defaultOpen"><i class="fa fa-home"></i> Home</button>
+<button class="tablink" onclick="openPage('Forms', this, 'red')"><i class="fa fa-book fa-fw"></i> Forms</button>
+<button class="tablink" onclick="openPage('Contact', this, 'purple')"><i class="fa fa-whatsapp"></i> Contact</button>
+<button class="tablink" onclick="openPage('Skills', this, 'red')"><i class="fa fa-cog fa-spin"></i> Skills</button>
+<button class="tablink" onclick="openPage('About', this, 'purple')"><i class="fa fa-grav"></i> About me</button>
+<button class="tablink" onclick="openPage('Resume', this, 'red')"><i class="fa fa-leanpub"></i> Resume</button>
+
+
+
+<div id="Home" class="tabcontent">
+  
+  
+  <div class="container">
+  <img src="SC-FEAT1.png" alt="Concept art from Star Citizen displying a space station" width="100" height="200">
+  <div class="center" style="color:green">
+        <script>
+
+         var name; // string entered by the user
+
+         // read the name from the prompt box as a string
+         name = window.prompt( "Please enter your name" );
+
+         document.writeln( "<h3>Hello " + name + 
+            ", Welcome this is my website for CS4300(Web Programming) </h3>" );
+		    </script></div>
+      <div>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+    <h4>Follow Me</h4>
+    <a class="w3-button w3-large w3-blue" href="https://www.facebook.com/blancolau" title="Facebook"><i class="fa fa-facebook"></i></a>
+    <a class="w3-button w3-large w3-blue" href="https://twitter.com/Sir_Bai_zi" title="Twitter"><i class="fa fa-twitter"></i></a>
+    <a class="w3-button w3-large w3-purple" href="https://www.instagram.com/blancolau/" title="Instagram"><i class="fa fa-instagram"></i></a>
+    <a class="w3-button w3-large w3-teal w3-hide-small" href="https://www.linkedin.com/in/javier-blanco-129267159/" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+  </footer>
+</div>
+
+
+<div id="Forms" class="tabcontent">
+   
+   <h1><center>Feedback Form</center></h1>
+
+  <div class="container">
+    <img src="The-Simpsons-bush.gif" alt="Simpsons gif of Homer being absorbed by the bushes.">
+    <div class="center"><p style="color:darkred;">Please fill out this form to help 
+         us improve our site.</p>
+
+      <!-- this tag starts the form, gives the -->
+      <!-- method of sending information and the -->
+      <!-- location of the form-processing script -->
+      <form method = "post" action = "http://www.deitel.com">
+         <!-- hidden inputs contain non-visual -->
+         <!-- information that will also be submitted -->
+         <input type = "hidden" name = "recipient"
+            value = "javierlau@gmail.com">
+         <input type = "hidden" name = "subject" 
+            value = "Feedback Form">
+         <input type = "hidden" name = "redirect" 
+            value = "main.html"> 
+
+         <!-- <input type = "text"> inserts a text field -->
+         <p><label>Name:
+               <input name = "name" type = "text" size = "25" maxlength = "30">
+            </label></p>
+         <p>
+          <p><label>Email:
+                <input type="text" name="email" size = "25" maxlength="30">
+              </label></p>
+              <p><label>Message:
+                <input class="text" type="text" name="Message" required></label></p>
+            <!-- input types "submit" and "reset" insert -->
+            <!-- buttons for submitting and clearing the -->
+            <!-- form's contents, respectively -->
+            <input type = "submit" value = "Submit" style="color: black;">
+            <input type = "reset" value = "Clear"   style="color: black;">
+         </p>   
+      </form>
+    </div>
+  </div>
+   <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+    <h4>Follow Me</h4>
+    <a class="w3-button w3-large w3-blue" href="https://www.facebook.com/blancolau" title="Facebook"><i class="fa fa-facebook"></i></a>
+    <a class="w3-button w3-large w3-blue" href="https://twitter.com/Sir_Bai_zi" title="Twitter"><i class="fa fa-twitter"></i></a>
+    <a class="w3-button w3-large w3-purple" href="https://www.instagram.com/blancolau/" title="Instagram"><i class="fa fa-instagram"></i></a>
+    <a class="w3-button w3-large w3-teal w3-hide-small" href="https://www.linkedin.com/in/javier-blanco-129267159/" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+  </footer>
+</div>
+
+<div id="Contact" class="tabcontent">
+  <div class="center">
+    <div class="w3-container w3-padding-20 w3-theme-l1" id="contact">
+      <div class="w3-row">
+        <div class="w3-col m5">
+          <div class="w3-padding-10 w3-center"><span class="w3-xlarge w3-border-red w3-bottombar">Contact Us</span></div>
+          <h3>Address</h3>
+          <p><i class="fa fa-map-marker w3-text-red w3-xlarge"></i>  Houston, TX</p>
+          <p><i class="fa fa-phone w3-text-green w3-xlarge"></i>  +1 (713)464-7516</p>
+          <p><i class="fa fa-envelope-o w3-text-white w3-xlarge"></i>  Javier@gemail.com</p>
+        </div>
+        <p> </p>
+        <p> </p> 
+   	    <p> </p>
+      </div>
+    </div>
+  </div>
+   	  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+    <h4>Follow Me</h4>
+    <a class="w3-button w3-large w3-blue" href="https://www.facebook.com/blancolau" title="Facebook"><i class="fa fa-facebook"></i></a>
+    <a class="w3-button w3-large w3-blue" href="https://twitter.com/Sir_Bai_zi" title="Twitter"><i class="fa fa-twitter"></i></a>
+    <a class="w3-button w3-large w3-purple" href="https://www.instagram.com/blancolau/" title="Instagram"><i class="fa fa-instagram"></i></a>
+    <a class="w3-button w3-large w3-teal w3-hide-small" href="https://www.linkedin.com/in/javier-blanco-129267159/" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+  </footer>
+</div>
+
+<div id="Skills" class="tabcontent">
+  <h3>.</h3>
+  <h3><center>Skills</center></h3>
+  <p><!-- the <table> tag opens a table -->
+      <table border = "1">
+
+         <!-- the <caption> tag summarizes the table's -->
+         <!-- contents (this helps visually impaired people) -->
+         <caption><center><strong><br>Table of Progrmming Languages</br> and 
+		    <br>Profinciency level</br></strong></center></caption>
+
+         <!-- the <thead> section appears first in the table -->
+         <!-- it formats the table header area -->
+         <thead>
+            <tr> <!-- <tr> inserts a table row -->
+               <th>Language</th> <!-- insert a heading cell -->
+               <th>Profinciency</th>
+            </tr>
+         </thead>
+
+         <!-- the <tfoot> section appears last in the table -->
+         <!-- it formats the table footer -->
+            
+
+         <!-- all table content is enclosed -->
+         <!-- within the <tbody> -->
+         <tbody>
+            <tr>
+               <td>C#</td> <!-- insert a data cell -->
+               <td>Apprentice</td>
+            </tr>
+            <tr>
+               <td>C</td>
+               <td>Apprentice</td>
+            </tr>
+            <tr>
+            	<td>C++</td>
+            	<td>Journeyman</td>
+            </tr>
+            <tr>
+               <td>CSS3</td>
+               <td>Novice</td>
+            </tr>
+            <tr>
+               <td>Java</td>
+               <td>Apprentice</td>
+            </tr>
+            <tr>
+            	<td>JavaScript</td>
+            	<td>Novice</td>
+            </tr>
+            <tr>
+               <td>HTML5</td>
+               <td>Novice</td>
+            </tr>
+         
+         </tbody>
+      </table>
+   	  <!-- -->
+    </p><img src="Rasputin.jpg" alt="Image of Destiny 2 conecpt art of Exo" width="50%" height="50%" class="w3-container w3-padding-32 w3-theme-d1"></p>
+          <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+    <h4>Follow Me</h4>
+    <a class="w3-button w3-large w3-blue" href="https://www.facebook.com/blancolau" title="Facebook"><i class="fa fa-facebook"></i></a>
+    <a class="w3-button w3-large w3-blue" href="https://twitter.com/Sir_Bai_zi" title="Twitter"><i class="fa fa-twitter"></i></a>
+    <a class="w3-button w3-large w3-purple" href="https://www.instagram.com/blancolau/" title="Instagram"><i class="fa fa-instagram"></i></a>
+    <a class="w3-button w3-large w3-teal w3-hide-small" href="https://www.linkedin.com/in/javier-blanco-129267159/" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+  </footer>
+</div>
+
+<div id="About" class="tabcontent">
+  <h1 style="color:white;"><center>My introduction<center></h1>
+    <p><center style = "color:green;">Hello, my name is Javier Blanco. I am currently 27 years old and a senior in Computer Science at UHD. <br>I have work from the age of 14 from construction, tile, and roofing work.</br> I worked as a door to door salesman before enlisting into the USMC. <br>I received my US Citizenship in Afghanistan back in 2013.</br> I have worked as an EMT and first aid responder until December of 2019.
+    </p></center>
+	
+		<p><br><center style="color:green;">A few of my hobbies include shooting, hiking, snowboarding, fishing, (just started) playing piano, and coding video games in Unity and Unreal.</br> I do not know what industry to focus on, but I try to learn a bit of knowledge from each. <br>My goals in life are to get a master's degree and work on getting a doctorate from MIT.</br>The greatest goal will be knowing I did a good job as a parent. <br>Currently working on my proposal for my senior research project. </br>I have been interested in simulating reality with practical calculations using fluid mechanics.<br> I have to speak with the department professors to help with an idea for research.</br>
+		  </center></p>
+
+		<p><center style="color:green;">I hope to finish this semester strong, working on projects to develop my resume and skills. I wish you luck with your endeavors. 
+      <br><bold style="color:white;">Fortis mane!</br>
+    </center></p>
+		
+
+		<p style="color: green;"><center style="color:darkgrey;">This is a picture of me with my son.</center></p>
+   	  	<p><center><img src="ME.png" alt="Picture of me holding my son." style="width:20%"></center></p>
+            <!-- Footer -->
+    <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+      <h4>Follow Me</h4>
+      <a class="w3-button w3-large w3-blue" href="https://www.facebook.com/blancolau" title="Facebook"><i class="fa fa-facebook"></i></a>
+      <a class="w3-button w3-large w3-blue" href="https://twitter.com/Sir_Bai_zi" title="Twitter"><i class="fa fa-twitter"></i></a>
+      <a class="w3-button w3-large w3-purple" href="https://www.instagram.com/blancolau/" title="Instagram"><i class="fa fa-instagram"></i></a>
+      <a class="w3-button w3-large w3-teal w3-hide-small" href="https://www.linkedin.com/in/javier-blanco-129267159/" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+    </footer>
+</div>
+
+<div id="Resume" class="tabcontent">
+  <h3><center>My Resume</center></h3>
+  
+  <div class="container">
+    <p><iframe src="Javier_Blanco_ComputerScience_2021.pdf" width="100%" height="1000px">
+    </iframe></p>
+  </div>
+      <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+    <h4>Follow Me</h4>
+    <a class="w3-button w3-large w3-blue" href="https://www.facebook.com/blancolau" title="Facebook"><i class="fa fa-facebook"></i></a>
+    <a class="w3-button w3-large w3-blue" href="https://twitter.com/Sir_Bai_zi" title="Twitter"><i class="fa fa-twitter"></i></a>
+    <a class="w3-button w3-large w3-purple" href="https://www.instagram.com/blancolau/" title="Instagram"><i class="fa fa-instagram"></i></a>
+    <a class="w3-button w3-large w3-teal w3-hide-small" href="https://www.linkedin.com/in/javier-blanco-129267159/" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+  </footer>
+</div>
+
+
+
+
+<script>
+// Function that allows the page to refresh and load a new one	
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
