@@ -295,7 +295,7 @@
                 <input name="name" placeholder="Name" type="text" required /><br/>
                 <input name="email" placeholder="Email" type="email" required /><br/>
                 <textarea name="message" placeholder="Message" required ></textarea>
-                <input type="submit" value="SEND" class="submit" />
+                <input onclick="myFunction()" type="submit" value="SEND" class="submit" />
             </form>
 </div>
 
@@ -457,6 +457,15 @@ $(document).ready(function(){
   });
 });
 
+	//form
+function myFunction() {
+  var txt;
+  if (confirm("Sorry! We're still working on this!")) {
+    txt = "Sorry! We're still working on this!";
+  } else {
+    txt = "Sorry! We're still working on this!";
+  }
+}
 
 </script>
 
